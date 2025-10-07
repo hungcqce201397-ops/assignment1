@@ -1,29 +1,105 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My Website</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+        }
+        header {
+            background-color: #333333;
+            color: white; 
+            padding: 10px 0;
+        }
+        nav {
+            background-color: #555555;
+        }
+        main {
+            background-color: #f4f4f4;
+            font-size: 1rem; 
+            padding: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        footer {
+            background-color: #333333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        li {
+            list-style: none;
+            display: inline-block;
+            width: 150px;
+            text-align: center; 
+            margin: 0 10px;
+            padding: 5px;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+        }
+        h1 {
+            text-align: center;
+            font-family: 'Times New Roman', serif;
+            color: #0077b6;
+            margin: 0;
+        }
+        h2 {
+            text-align: center;
+            color: #333333;
+            margin-top: 30px;
+        }
+        p {
+            line-height: 1.6; 
+        }
+        img {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+            height: auto;
+            border: 3px solid #555555;
+            border-radius: 8px;
+        }
+        a {
+            color: #0077b6;
+        }
+    </style>
 </head>
 <body>
 
-  <h1 style="color: blue">Welcome to My Website, my name is Cao Quang Hưng</h1>
+    <header>
+        <!-- The H1 is wrapped in the header to get the dark background and white text -->
+        <h1>Welcome to My Website, my name is Cao Quang Hưng</h1>
+    </header>
 
-  <p>This is the home page of my website.</p>
-   
-  <h2>My Favorite Foods</h2>
-        <ul>
-            <li>Pizza</li>
-            <li>Tacos</li>
-            <li>Fried Fries</li>
-        </ul>
+    <main>
+        <p>This is the home page of my website.</p>
+        
+        <h2>My Favorite Foods</h2>
+        <nav> <!-- Wrapping list in NAV to apply background style -->
+            <ul>
+                <li>Pizza</li>
+                <li>Tacos</li>
+                <li>Fried Fries</li>
+            </ul>
+        </nav>
 
         <h2>Some Interesting Images</h2>
         <p>Here are a few images to showcase some cool stuff about my school</p>
+        
+        <!-- Image code restored to original local paths and width attribute per request -->
         <img src="fpt1.jpg" alt="This is a picture of my school" width="90%">
         <img src="fpt2.jpg" alt="And this is 1 of my learning called Vovinam which known as Vietnamese's martial art" width="90%">
         <img src="fpt3.jpg" alt="Here is my school festival it's fun" width="90%">
-        <p>Check out the school website!! <a href="https://daihoc.fpt.edu.vn" target="_blank">Fptu</a> for more information.</p>
-      </div>
-
+        
+        <p style="text-align: center;">Check out the school website!! <a href="https://daihoc.fpt.edu.vn" target="_blank">Fptu</a> for more information.</p>
     </main>
+    
+    <footer>
+        <p>Website created by Cao Quang Hưng.</p>
+    </footer>
+
 </body>
 </html>
