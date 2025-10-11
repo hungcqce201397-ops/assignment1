@@ -8,7 +8,23 @@
         body {
             font-family: Arial, Helvetica, sans-serif;
             font-size: 18px;
+            position: relative; 
         }
+        .skip-link {
+            position: absolute;
+            left: -9999px;
+            z-index: 100;
+            padding: 8px;
+            background-color: white;
+            color: black;
+            border: 2px solid #0077b6;
+        }
+
+        .skip-link:focus {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
         header {
             background-color: #333333;
             color: white; 
@@ -16,6 +32,16 @@
         }
         nav {
             background-color: #555555;
+            display: flex;
+            justify-content: center;
+            padding: 5px 0;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 10px;
         }
         main {
             background-color: #f4f4f4;
@@ -31,15 +57,20 @@
             padding: 10px 0;
         }
         li {
-            list-style: none;
-            display: inline-block;
-            width: 150px;
+            width: auto;
             text-align: center; 
-            margin: 0 10px;
-            padding: 5px;
+            padding: 5px 15px;
             background-color: #e0e0e0;
             border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            cursor: pointer;
         }
+        li:hover {
+            background-color: #ffffff; 
+            transform: translateY(-2px);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
         h1 {
             text-align: center;
             font-family: 'Times New Roman', serif;
@@ -59,9 +90,20 @@
             margin: 20px auto;
             max-width: 100%;
             height: auto;
+            
             border: 3px solid #555555;
+            padding: 10px;
             border-radius: 8px;
+            
+            transition: transform 0.4s ease;
         }
+        img:nth-child(odd) {
+            border-color: #0077b6;
+        }
+        img:hover {
+            transform: scale(1.02);
+        }
+
         a {
             color: #0077b6;
         }
@@ -69,27 +111,27 @@
 </head>
 <body>
 
+    <a href="#main-content" class="skip-link">Skip to Main Content</a>
+
     <header>
-        <!-- The H1 is wrapped in the header to get the dark background and white text -->
         <h1>Welcome to My Website, my name is Cao Quang Hưng</h1>
     </header>
 
-    <main>
+    <main id="main-content">
         <p>This is the home page of my website.</p>
         
         <h2>My Favorite Foods</h2>
-        <nav> <!-- Wrapping list in NAV to apply background style -->
+        <nav>
             <ul>
-                <li>Pizza</li>
-                <li>Tacos</li>
-                <li>Fried Fries</li>
+                <li><a href="#" style="color: inherit; text-decoration: none;">Pizza</a></li>
+                <li><a href="#" style="color: inherit; text-decoration: none;">Tacos</a></li>
+                <li><a href="#" style="color: inherit; text-decoration: none;">Fried Fries</a></li>
             </ul>
         </nav>
 
         <h2>Some Interesting Images</h2>
         <p>Here are a few images to showcase some cool stuff about my school</p>
         
-        <!-- Image code restored to original local paths and width attribute per request -->
         <img src="fpt1.jpg" alt="This is a picture of my school" width="90%">
         <img src="fpt2.jpg" alt="And this is 1 of my learning called Vovinam which known as Vietnamese's martial art" width="90%">
         <img src="fpt3.jpg" alt="Here is my school festival it's fun" width="90%">
